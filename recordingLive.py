@@ -7,10 +7,10 @@ import datetime
 st.set_page_config(page_title="📞 Agent Disposition Viewer", layout="wide")
 
 db_config = {
-    'host': '103.180.186.249',
-    'user': 'qrt',
-    'password': 'sHMNG||111@0#',
-    'database': 'crm_call_master'
+    'host': st.secrets["DB_HOST"],
+    'user': st.secrets["DB_USER"],
+    'password': st.secrets["DB_PASSWORD"],
+    'database': st.secrets["DB_NAME"]
 }
 
 def get_phone_number_with_email_id(email):
